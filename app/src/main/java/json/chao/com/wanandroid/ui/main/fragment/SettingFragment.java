@@ -79,7 +79,7 @@ public class SettingFragment extends BaseFragment<SettingPresenter> implements
     @Override
     public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
         switch (compoundButton.getId()) {
-            case R.id.cb_setting_night:
+            case R.id.cb_setting_night: // 夜间模式
                 mPresenter.setNightModeState(b);
                 RxBus.getDefault().post(new NightModeEvent(b));
                 break;
